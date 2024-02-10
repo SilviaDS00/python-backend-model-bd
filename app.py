@@ -2,11 +2,9 @@
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 import joblib
-from flask_cors import CORS
 
 def create_app():
     app = Flask(__name__)
-    CORS(app)
 
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///respuestas.db'
     # postgresql://flaskapp_memx_user:wP2ScRENooSz2GNJCnQAHvAXGHQj8qhc@dpg-cn3anrljm4es73bk3tig-a.frankfurt-postgres.render.com/flaskapp_memx
